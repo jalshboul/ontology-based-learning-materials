@@ -93,6 +93,12 @@ The application will start on `http://127.0.0.1:5000` (or `http://localhost:5000
    - Learning Material Similarity percentage
    - Domain and difficulty information
 
+## 📊 Research Background
+
+This system implements the methodology from:
+> *"Ontology-Based Automatic Generation of Learning Materials for Python Programming"*  
+> by Jawad Alshboul and Erika Baksa-Varga
+
 ## 🏗️ Project Structure
 
 ```
