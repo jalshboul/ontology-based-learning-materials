@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Quiz - Python MCQ Quiz Generator{% endblock %}
+{% block content %}
+<h2>{{ domain }} Quiz</h2>
+<p>Difficulty: {{ difficulty }}</p>
+<p>Learning Material Similarity: {{ similarity }}%</p>
+<ol>
+  {% for q in questions %}
+  <li class="mb-3">
+    <p>{{ q.question }}</p>
+    <ul class="list-unstyled">
+      {% for opt in q.options %}
+      <li>{{ opt }}</li>
+      {% endfor %}
+    </ul>
+    <strong>Answer: {{ q.answer }}</strong>
+  </li>
+  {% endfor %}
+</ol>
+<a href="/" class="btn btn-secondary">Back</a>
+{% endblock %}

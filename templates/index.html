@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Select Domain - Python MCQ Quiz Generator{% endblock %}
+{% block content %}
+<form method="post" action="/quiz">
+  <div class="mb-3">
+    <label for="domain" class="form-label">Choose a domain:</label>
+    <select class="form-select" id="domain" name="domain" required>
+      {% for domain in domains %}
+      <option value="{{ domain }}">{{ domain }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="difficulty" class="form-label">Difficulty:</label>
+    <select class="form-select" id="difficulty" name="difficulty">
+      {% for level in difficulties %}
+      <option value="{{ level }}">{{ level }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="num" class="form-label">Number of Questions:</label>
+    <input type="number" class="form-control" id="num" name="num" value="5" min="1" max="20">
+  </div>
+  <button type="submit" class="btn btn-primary">Generate Quiz</button>
+</form>
+{% endblock %}
